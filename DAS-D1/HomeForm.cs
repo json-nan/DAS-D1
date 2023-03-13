@@ -2,7 +2,7 @@ namespace DAS_D1
 {
     public partial class HomeForm : Form
     {
-        private const int loadingSeaconds = 1;
+        private const int loadingSeaconds = 15;
         public HomeForm()
         {
             InitializeComponent();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAS_D1.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,9 @@ namespace DAS_D1
     public partial class LoginForm : Form
     {
         List <User> users = new List<User>() {
-            new User ("fRuiz", "buenanota", "Fernando Ruiz")
+            new User ("fRuiz", "buenanota", "Fernando Ruiz"),
+            new User ("jLopez", "123", "Jasson Lopez"),
+            new User ("rSantos", "abc", "Romeo Santos")
         };
         public LoginForm()
         {
@@ -29,6 +32,15 @@ namespace DAS_D1
 
                 AppForm appForm = new AppForm();
                 appForm.Show();
+
+                MessageBox.Show("Has accedido correctamente.");
+            }
+
+            else 
+            { this.Close();
+
+                MessageBox.Show("Usuario o contraseña inválidos.");
+
             }
 
 

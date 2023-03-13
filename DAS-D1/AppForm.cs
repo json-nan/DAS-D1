@@ -1,4 +1,7 @@
 ﻿using DAS_D1.Classes;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore;
+using OpenTK.Input;
 
 namespace DAS_D1
 {
@@ -161,6 +164,51 @@ namespace DAS_D1
                     language.License
                     );
             }
+        }
+
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pieChart1_Load(object sender, EventArgs e)
+        {
+            pieChart1.Series = new ISeries[]
+        {
+                new PieSeries<double> { Values = new double[] { 40 } , Name= "Game of Thrones"},
+                new PieSeries<double> { Values = new double[] { 34 }, Name= "Chernobyl" },
+                new PieSeries<double> { Values = new double[] { 26 }, Name= "The Marvelous Mrs. Maisel" },
+                
+        };
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pieChart3_Load(object sender, EventArgs e)
+        {
+            pieChart3.Series = new ISeries[]
+        {
+                new PieSeries<double> { Values = new double[] { 44 } , Name= "Harry Potter"},
+                new PieSeries<double> { Values = new double[] { 30 }, Name= "Goosebump" },
+                new PieSeries<double> { Values = new double[] { 26 }, Name= "Perry Mason" },
+
+        };
+        }
+
+        private void pieChart2_Load(object sender, EventArgs e)
+        {
+            pieChart2.Series = new ISeries[]
+        {
+                new PieSeries<double> { Values = new double[] { 47 } , Name= "Python"},
+                new PieSeries<double> { Values = new double[] { 38 }, Name= "Java" },
+                new PieSeries<double> { Values = new double[] { 15 }, Name= "Javascript" },
+
+        };
         }
     }
 }
